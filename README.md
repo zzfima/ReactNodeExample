@@ -26,12 +26,12 @@ click on tab
 13. add code to servers.js
 *const express = require('express')*
 *const app = express()*
-*app.get("/api", (req, res) => {*
-    *res.json({ "users": ["userOne", "userTwo"] })*
+*app.get("/ads", (req, res) => {*
+    *res.json({ adsArea": ["TikTok", "Instagram", "Facebook"] })*
 *})*
 *app.listen(5000, () => { console.log("server started on port 5000") })*
 14. in server folder - *npm run dev*
-15. in browser type - *<http://localhost:5000/api>*
+15. in browser type - *<http://localhost:5000/ads>*
 **react modify**
 16. cd client
 17. add into client package.json line *"proxy": "<http://localhost:5000>"*

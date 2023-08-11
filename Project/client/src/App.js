@@ -1,28 +1,31 @@
 import React, { useEffect, useState } from 'react'
 
 function App() {
-  const [backendData, serBackendData] = useState([{}])
+  const [backendData, setBackendData] = useState([{}])
 
   useEffect(() => {
-    fetch("/api").then(
-      response => response.json()
-    ).then(
-      data => {
-        serBackendData(data)
-      }
-    )
+    readUsers()
   }, [])
+
+  const readUsers = (() => fetch("/ads").then(
+    response => response.json()
+  ).then(
+    data => {
+      setBackendData(data)
+    }
+  ))
 
   return (
     <div>
-      {(typeof backendData.users === 'undefined') ? (
+      {(typeof backendData.adsArea === 'undefined') ? (
         <p>loading..</p>
       ) : (
-        backendData.users.map((user, i) => (
-          <p key={i}>{user}</p>
+        backendData.adsArea.map((ad, i) => (
+          <p key={i}>{ad}</p>
         ))
       )}
-
+      <button type="button" onClick={() => setBackendData({ "adsArea": ["Linkedin"] })}>secret ad</button>
+      <button type="button" onClick={() => readUsers()}>RESTORE</button>
     </div>
   )
 }
