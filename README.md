@@ -1,8 +1,8 @@
 # ReactNodeExample
 
-testing new tech stack
+## testing new tech stack
 
-resource: https://www.youtube.com/watch?v=w3vs4a03y3I&ab_channel=ArpanNeupane
+resource: *<https://www.youtube.com/watch?v=w3vs4a03y3I&ab_channel=ArpanNeupane>*
 
 1. create 2 folders: client and server
 2. *cd server*
@@ -14,4 +14,28 @@ resource: https://www.youtube.com/watch?v=w3vs4a03y3I&ab_channel=ArpanNeupane
 8. add script to startup server - in package.json in "scripts" add lines:
 "start": "node server",
 "dev": "nodemon server"
-9.
+9. cd client
+10. create react project - *npx create-react-app .*
+11. Install VS code extension - ES7+ React/Redux/React-Native snippets
+12. remove boilerplate code:
+all from App.cs
+all from App.js
+in App.js write *rfce* - Creates a React Functional Component with ES7 module system (ES7+ React/Redux/React-Native snippets)
+click on tab
+**server modify**
+13. add code to servers.js
+*const express = require('express')*
+*const app = express()*
+*app.get("/api", (req, res) => {*
+    *res.json({ "users": ["userOne", "userTwo"] })*
+*})*
+*app.listen(5000, () => { console.log("server started on port 5000") })*
+14. in server folder - *npm run dev*
+15. in browser type - *<http://localhost:5000/api>*
+**react modify**
+16. cd client
+17. add into client package.json line *"proxy": "<http://localhost:5000>"*
+18. add code into App.js
+19. in cmd - *npm start*
+20. in browser enter client address - *<http://localhost:3000/>*
+21. check in browser by click f11 network responses of api. it shall be *{"users":["userOne","userTwo"]}*
