@@ -46,4 +46,4 @@ click on tab
 19. add code into App.js
 20. in cmd - *npm start*
 21. in browser enter client address - *<http://localhost:3000/>*
-22. check in browser by click f11 network responses of api. it shall be *{"users":["userOne","userTwo"]}*
+22. check in browser by click f11 network responses of api. it shall be *{adsArea": ["TikTok", "Instagram", "Facebook"]}*
