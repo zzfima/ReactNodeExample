@@ -11,3 +11,7 @@ resource: https://www.youtube.com/watch?v=w3vs4a03y3I&ab_channel=ArpanNeupane
 5. create file - *touch server.js*
 6. install express - *npm i express*
 7. nodemon with dependencies - for hot reload - *npm i nodemon -D*
+8. add script to startup server - in package.json in "scripts" add lines:
+"start": "node server",
+"dev": "nodemon server"
+9.
