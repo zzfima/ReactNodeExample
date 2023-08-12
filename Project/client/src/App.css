@@ -1,0 +1,14 @@
+.blueHeader {
+    color: DodgerBlue;
+    padding: 40px;
+    font-family: Arial;
+    text-align: center;
+}
+
+.orangeButton {
+    color: hotpink;
+    font-family: Arial;
+    text-align: center;
+    background-color: bisque;
+    margin: 5px;
+}
