@@ -8,7 +8,7 @@ function MainApp() {
     readAdds()
   }, [])
 
-  const readAdds = (() => fetch("/ads").then(
+  const readAdds = (() => fetch("/advertisements").then(
     response => response.json()
   ).then(
     data => {
