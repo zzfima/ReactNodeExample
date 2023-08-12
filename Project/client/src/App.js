@@ -21,11 +21,11 @@ function App() {
         <p>loading..</p>
       ) : (
         backendData.adsArea.map((ad, i) => (
-          <p key={i}>{ad}</p>
+          <p>{i} : {ad}</p>
         ))
       )}
       <button type="button" onClick={() => setBackendData({ "adsArea": ["Linkedin"] })}>secret ad</button>
-      <button type="button" onClick={() => readUsers()}>RESTORE</button>
+      <button type="button" onClick={() => readUsers()}>Restore</button>
     </div>
   )
 }

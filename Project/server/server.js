@@ -1,4 +1,5 @@
 const express = require('express')
+
 const app = express()
 app.get("/ads", (req, res) => {
     res.json({ "adsArea": ["TikTok", "Instagram", "Facebook"] })
