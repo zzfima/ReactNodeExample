@@ -20,13 +20,9 @@ resource: *<https://www.youtube.com/watch?v=w3vs4a03y3I&ab_channel=ArpanNeupane>
 12. remove boilerplate code:
 all from App.cs
 all from App.js
-in App.js write *rfce* - Creates a React Functional Component with ES7 module system (ES7+ React/Redux/React-Native snippets)
+13. in App.js write *rfce* - Creates a React Functional Component with ES7 module system (ES7+ React/Redux/React-Native snippets)
 click on tab
-
-
-**server modify**
-
-
+**- server modify**
 14. add code to servers.js
 *const express = require('express')*
 *const app = express()*
@@ -36,11 +32,7 @@ click on tab
 *app.listen(5000, () => { console.log("server started on port 5000") })*
 15. in server folder - *npm run dev*
 16. in browser type - *<http://localhost:5000/ads>*
-
-
-**react modify**
-
-
+**- react modify**
 17. cd client
 18. add into client package.json line *"proxy": "<http://localhost:5000>"*
 19. add code into App.js
