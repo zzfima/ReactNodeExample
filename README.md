@@ -4,6 +4,8 @@
 
 ### Add Node server and React client which allow read/write advertisement places
 
+### starting workaround
+
 1. create 2 folders: client and server
 2. *cd server*
 3. setup files in server: *npm init -y*
@@ -39,3 +41,4 @@ click on tab
 20. in cmd - *npm start*
 21. in browser enter client address - *<http://localhost:3000/>*
 22. check in browser by click f11 network responses of api. it shall be *{advertisementPlaces": ["TikTok", "Instagram", "Facebook"]}*
+etc.
