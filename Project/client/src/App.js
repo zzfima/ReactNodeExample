@@ -28,7 +28,7 @@ function MainApp() {
             <p>loading..</p>
           ) : (
             backendData.adsArea.map((ad, i) => (
-              <p>{i} : {ad}</p>
+              <p className='greenList'>{i} : {ad}</p>
             ))
           )}
           <button type="button" className='orangeButton' onClick={() => setBackendData({ "adsArea": ["Linkedin"] })}>secret ad</button>
