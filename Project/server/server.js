@@ -3,16 +3,16 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
-var adds = ["TikTok", "Instagram", "Facebook"]
+var advertisementPlaces = ["TikTok", "Instagram", "Facebook"]
 
 app.get("/ads", (req, res) => {
-    res.json({ "adsArea": adds })
+    res.json({ "advertisementPlaces": advertisementPlaces })
 })
 
 app.post("/ads", bodyParser.json(), (req, res) => {
     var advertisementPlace = req.body.advertisementPlace
     console.log(advertisementPlace);
-    adds.push(advertisementPlace)
+    advertisementPlaces.push(advertisementPlace)
     return res.send("add has been added");
 })
 

@@ -27,7 +27,7 @@ click on tab
 *const express = require('express')*
 *const app = express()*
 *app.get("/ads", (req, res) => {*
-    *res.json({ adsArea": ["TikTok", "Instagram", "Facebook"] })*
+    *res.json({ advertisementPlaces": ["TikTok", "Instagram", "Facebook"] })*
 *})*
 *app.listen(5000, () => { console.log("server started on port 5000") })*
 15. in server folder - *npm run dev*
@@ -38,4 +38,4 @@ click on tab
 19. add code into App.js
 20. in cmd - *npm start*
 21. in browser enter client address - *<http://localhost:3000/>*
-22. check in browser by click f11 network responses of api. it shall be *{adsArea": ["TikTok", "Instagram", "Facebook"]}*
+22. check in browser by click f11 network responses of api. it shall be *{advertisementPlaces": ["TikTok", "Instagram", "Facebook"]}*

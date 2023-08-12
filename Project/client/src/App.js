@@ -24,14 +24,14 @@ function MainApp() {
       <body>
         <h2 className='blueHeader'>Advertisements areas</h2>
         <div>
-          {(typeof backendData.adsArea === 'undefined') ? (
+          {(typeof backendData.advertisementPlaces === 'undefined') ? (
             <p>loading..</p>
           ) : (
-            backendData.adsArea.map((ad, i) => (
+            backendData.advertisementPlaces.map((ad, i) => (
               <p className='greenList'>{i} : {ad}</p>
             ))
           )}
-          <button type="button" className='orangeButton' onClick={() => setBackendData({ "adsArea": ["Linkedin"] })}>secret ad</button>
+          <button type="button" className='orangeButton' onClick={() => setBackendData({ "advertisementPlaces": ["Linkedin"] })}>secret ad</button>
           <button type="button" onClick={() => readAdds()}>Restore</button>
         </div>
       </body>
