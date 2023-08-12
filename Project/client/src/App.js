@@ -31,7 +31,7 @@ function MainApp() {
         <title>Advertisements</title>
       </head>
       <body>
-        <h2 className='blueHeader'>Advertisements areas</h2>
+        <h2 className='blueHeader'>Advertisement areas</h2>
         <div>
           {(typeof getBackendData.advertisementPlaces === 'undefined') ? (
             <p>loading..</p>
