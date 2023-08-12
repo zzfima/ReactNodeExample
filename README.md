@@ -22,20 +22,28 @@ all from App.cs
 all from App.js
 in App.js write *rfce* - Creates a React Functional Component with ES7 module system (ES7+ React/Redux/React-Native snippets)
 click on tab
+
+
 **server modify**
-13. add code to servers.js
+
+
+14. add code to servers.js
 *const express = require('express')*
 *const app = express()*
 *app.get("/ads", (req, res) => {*
     *res.json({ adsArea": ["TikTok", "Instagram", "Facebook"] })*
 *})*
 *app.listen(5000, () => { console.log("server started on port 5000") })*
-14. in server folder - *npm run dev*
-15. in browser type - *<http://localhost:5000/ads>*
+15. in server folder - *npm run dev*
+16. in browser type - *<http://localhost:5000/ads>*
+
+
 **react modify**
-16. cd client
-17. add into client package.json line *"proxy": "<http://localhost:5000>"*
-18. add code into App.js
-19. in cmd - *npm start*
-20. in browser enter client address - *<http://localhost:3000/>*
-21. check in browser by click f11 network responses of api. it shall be *{"users":["userOne","userTwo"]}*
+
+
+17. cd client
+18. add into client package.json line *"proxy": "<http://localhost:5000>"*
+19. add code into App.js
+20. in cmd - *npm start*
+21. in browser enter client address - *<http://localhost:3000/>*
+22. check in browser by click f11 network responses of api. it shall be *{adsArea": ["TikTok", "Instagram", "Facebook"]}*
