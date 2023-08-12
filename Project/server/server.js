@@ -5,11 +5,11 @@ const app = express()
 
 var advertisementPlaces = ["TikTok", "Instagram", "Facebook"]
 
-app.get("/advertisements", (req, res) => {
+app.get("/advertisementPlaces", (req, res) => {
     res.json({ "advertisementPlaces": advertisementPlaces })
 })
 
-app.post("/advertisements", bodyParser.json(), (req, res) => {
+app.post("/advertisementPlaces", bodyParser.json(), (req, res) => {
     var advertisementPlace = req.body.advertisementPlace
     console.log(advertisementPlace);
     advertisementPlaces.push(advertisementPlace)

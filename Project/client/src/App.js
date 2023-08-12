@@ -2,19 +2,28 @@ import React, { useEffect, useState } from 'react'
 import './App.css';
 
 function MainApp() {
-  const [backendData, setBackendData] = useState([{}])
+  const [getBackendData, setBackendData] = useState([{}])
+  const [getNewAdvertisementPlace, setNewAdvertisementPlace] = useState({})
 
   useEffect(() => {
-    readAdds()
+    readAdvertisementPlaces()
   }, [])
 
-  const readAdds = (() => fetch("/advertisements").then(
+  const readAdvertisementPlaces = (() => fetch('/advertisementPlaces').then(
     response => response.json()
   ).then(
     data => {
       setBackendData(data)
     }
   ))
+
+  const submitNewAdvertisementPlace = (() => fetch('/advertisementPlaces', {
+    method: 'POST',
+    body: JSON.stringify(getNewAdvertisementPlace),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }))
 
   const mainPage =
     <html>
@@ -24,15 +33,21 @@ function MainApp() {
       <body>
         <h2 className='blueHeader'>Advertisements areas</h2>
         <div>
-          {(typeof backendData.advertisementPlaces === 'undefined') ? (
+          {(typeof getBackendData.advertisementPlaces === 'undefined') ? (
             <p>loading..</p>
           ) : (
-            backendData.advertisementPlaces.map((ad, i) => (
+            getBackendData.advertisementPlaces.map((ad, i) => (
               <p className='greenList'>{i} : {ad}</p>
             ))
           )}
           <button type="button" className='orangeButton' onClick={() => setBackendData({ "advertisementPlaces": ["Linkedin"] })}>secret ad</button>
-          <button type="button" onClick={() => readAdds()}>Restore</button>
+          <button type="button" onClick={() => readAdvertisementPlaces()}>Restore</button>
+        </div>
+        <div>
+          <form onSubmit={submitNewAdvertisementPlace}>
+            <input type="text" onChange={e => setNewAdvertisementPlace({ ...getNewAdvertisementPlace, advertisementPlace: e.target.value })} />
+            <button type="submit">Submit</button>
+          </form>
         </div>
       </body>
     </html>
