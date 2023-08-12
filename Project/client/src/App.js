@@ -5,10 +5,10 @@ function MainApp() {
   const [backendData, setBackendData] = useState([{}])
 
   useEffect(() => {
-    readUsers()
+    readAdds()
   }, [])
 
-  const readUsers = (() => fetch("/ads").then(
+  const readAdds = (() => fetch("/ads").then(
     response => response.json()
   ).then(
     data => {
@@ -32,7 +32,7 @@ function MainApp() {
             ))
           )}
           <button type="button" className='orangeButton' onClick={() => setBackendData({ "adsArea": ["Linkedin"] })}>secret ad</button>
-          <button type="button" onClick={() => readUsers()}>Restore</button>
+          <button type="button" onClick={() => readAdds()}>Restore</button>
         </div>
       </body>
     </html>
