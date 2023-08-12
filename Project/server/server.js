@@ -13,7 +13,7 @@ app.post("/advertisementPlaces", bodyParser.json(), (req, res) => {
     var advertisementPlace = req.body.advertisementPlace
     console.log(advertisementPlace);
     advertisementPlaces.push(advertisementPlace)
-    return res.send("add has been added");
+    return res.send("advertisement place has been added");
 })
 
 app.listen(5000, () => { console.log("server started on port 5000") })
